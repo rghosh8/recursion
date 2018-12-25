@@ -1,0 +1,26 @@
+<html>
+<body>
+    <div id="parent-id">
+        <div><div class="somediv"><div class="innerdiv"><span class="targetClassName">yay</span></div></div></div>
+    </div>
+    <script>
+        // Get everything in the body
+        var elementList = document.querySelectorAll("body");
+        //Get the HTML code
+        var childrenElement = elementList[0].children[0];
+        // Get all the childnode that matches the class
+        var match = childrenElement.querySelectorAll("."+"targetClassName");
+        for(var i = 0; i < match.length; i++){
+            console.log(match[i].outerHTML);
+        }
+
+        // var match2 = document.querySelectorAll(".targetClassName")
+        // console.log(match2.outerHTML);
+        //var test = parentDOM.getElementsByClassName("targetClassName"); // a list of matching elements, *not* the element itself
+        //console.log(childrenElement); //HTMLCollection[1]
+
+        //var testTarget = parentDOM.getElementsByClassName("targetClassName")[0]; // the first element, as we wanted
+        //console.log(parentDOM.getElementsByClassName("targetClassName")[1].outerHTML); //<p class="test">hello world 2</p>
+    </script>
+</body>
+</html>
